@@ -4,15 +4,20 @@
 
 :root {
   --header-radius: 30px;
+
+  --white-rgb: 253, 251, 248;
+  --dim-white-rgb: 204, 199, 194;
+  --gray-rgb: 56, 48, 48;
+  --dim-gray-rgb: 45, 38, 38;
 }
 
 body {
-  background-color: rgb(56, 48, 48);
+  background-color: rgb(var(--dim-gray-rgb));
 
   font-size: 100%;
   font-family: "Georgia", Georgia, "Times New Roman", Times, serif;
   text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
-  color: white;
+  color: rgb(var(--white-rgb));
 }
 
 h1 {
@@ -41,6 +46,7 @@ h6 {
 
 p {
   font-size: 0.9em;
+  color: rgb(var(--dim-white-rgb));
 }
 
 .banner {
@@ -54,7 +60,7 @@ p {
 }
 
 .header {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgb(var(--white-rgb));
   border-bottom-left-radius: var(--header-radius);
   border-bottom-right-radius: var(--header-radius);
   background-color: darkred;
@@ -98,7 +104,7 @@ p {
 }
 
 .tab + .tab {
-  border-left: solid 1px white;
+  border-left: solid 1px rgb(var(--white-rgb));
 }
 
 .tab:first-of-type {
@@ -116,16 +122,16 @@ p {
   padding: 5px;
 
   text-align: center;
-  color: white;
+  color: rgb(var(--white-rgb));
   text-decoration: none;
 }
 
 .tab:not(.active):hover {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25), 90%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25), 80%, rgba(0, 0, 0, 0));
 }
 
 .tab:not(.active):active {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), 90%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), 80%, rgba(0, 0, 0, 0));
 }
 
 .content {
@@ -133,5 +139,13 @@ p {
 }
 
 .active {
-  background-image: linear-gradient(to top, black, 90%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), 80%, rgba(0, 0, 0, 0));
+}
+
+.white {
+  color: rgb(var(--white-rgb));
+}
+
+.off-white {
+  color: rgb(var(--dim-white-rgb));
 }
