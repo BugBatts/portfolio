@@ -89,11 +89,32 @@ p {
   vertical-align: middle;
 }
 
+.tab-super {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .tab-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
+  flex: 1 1 auto;
+}
+
+.tab-container:first-of-type {
+  min-width: 59%;
+}
+
+.tab-container:last-of-type {
+  min-width: 39%;
+}
+
+.tab-container + .tab-container {
+  border-left: solid 1px rgb(var(--white-rgb));
 }
 
 .tab {
@@ -111,11 +132,11 @@ p {
   border-left: solid 1px rgb(var(--white-rgb));
 }
 
-.tab:first-of-type {
+.tab-container:first-of-type > .tab:first-of-type {
   border-bottom-left-radius: var(--header-radius);
 }
 
-.tab:last-of-type {
+.tab-container:last-of-type > .tab:last-of-type {
   border-bottom-right-radius: var(--header-radius);
 }
 
@@ -128,6 +149,16 @@ p {
   text-align: center;
   color: rgb(var(--white-rgb));
   text-decoration: none;
+}
+
+.tab-link:before {
+  content: "";
+  margin-left: -100%;
+}
+
+.tab-link:after {
+  content: "";
+  margin-right: -100%;
 }
 
 .tab:not(.active):hover {
@@ -174,12 +205,6 @@ p {
   width: 100%;
 }
 
-@media screen and (max-width: 992px) {
-  .fill-pair {
-    max-width: 100%;
-  }
-}
-
 .card {
   border-radius: 15px;
   background-color: rgb(var(--gray-rgb));
@@ -189,7 +214,7 @@ p {
 }
 
 .thumbnail {
-  width: 12em;
+  width: 13em;
   height: auto;
   float: left;
 
@@ -221,4 +246,45 @@ p {
 
 .off-white {
   color: rgb(var(--dim-white-rgb));
+}
+
+@media screen and (max-width: 992px) {
+  .fill-pair {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tab-container {
+    width: 100%;
+  }
+
+  .tab-container + .tab-container {
+    border-left: none;
+    border-top: solid 1px rgb(var(--white-rgb));
+  }
+
+  .tab-container:first-of-type > .tab:first-of-type {
+    border-bottom-left-radius: 0;
+  }
+
+  .tab-container:last-of-type > .tab:first-of-type {
+    border-bottom-left-radius: var(--header-radius);
+  }
+
+  .section {
+    scroll-margin-top: 162px;
+  }
+
+  .tab-container:last-of-type > .tab:not(.active):hover {
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .tab-container:last-of-type > .tab:not(.active):active {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .tab-container:last-of-type > .active {
+    background: rgba(0, 0, 0, 0.75);
+  }
 }
