@@ -3,12 +3,16 @@
 }
 
 :root {
+  scroll-snap-type: y proximity;
+
+
   --header-radius: 30px;
 
   --white-rgb: 253, 251, 248;
   --dim-white-rgb: 204, 199, 194;
   --gray-rgb: 56, 48, 48;
   --dim-gray-rgb: 45, 38, 38;
+  --red-rgb: 139, 0, 0;
 }
 
 body {
@@ -63,7 +67,7 @@ p {
   border-bottom: 2px solid rgb(var(--white-rgb));
   border-bottom-left-radius: var(--header-radius);
   border-bottom-right-radius: var(--header-radius);
-  background-color: darkred;
+  background-color: rgb(var(--red-rgb));
 }
 
 .align-right {
@@ -136,6 +140,24 @@ p {
 
 .content {
   padding: 10px;
+}
+
+.section {
+  margin-bottom: 5px;
+  scroll-margin-top: 130px;
+  scroll-snap-align: start;
+}
+
+.section + .section {
+  margin-top: 15px;
+}
+
+.section-header {
+  margin-bottom: 0.15em;
+}
+
+.section-header:not(:first-child) {
+  margin-top: 0.5em;
 }
 
 .active {
