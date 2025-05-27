@@ -103,11 +103,11 @@ p {
 }
 
 .tab-container:first-of-type {
-  min-width: 59%;
+  min-width: 59.9%;
 }
 
 .tab-container:last-of-type {
-  min-width: 39%;
+  min-width: 39.9%;
 }
 
 .tab-container + .tab-container {
@@ -210,6 +210,10 @@ p {
   padding: 10px;
 }
 
+.card > .section-header {
+  border-bottom: solid 2px rgb(var(--white-rgb));
+}
+
 .thumbnail {
   width: 13em;
   height: auto;
@@ -252,10 +256,6 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-  .banner {
-    position: relative;
-  }
-
   .tab-container {
     width: 100%;
   }
@@ -273,10 +273,6 @@ p {
     border-bottom-left-radius: var(--header-radius);
   }
 
-  .section {
-    scroll-margin-top: 0px;
-  }
-
   .tab-container:last-of-type > .tab:not(.active):hover {
     background: rgba(0, 0, 0, 0.25);
   }
@@ -292,5 +288,16 @@ p {
   .thumbnail {
     width: 100%;
     margin: 0px 0px 5px;
+  }
+}
+
+@media screen and (max-width: 600px),
+       screen and (max-height: 600px) {
+  .banner {
+    position: relative;
+  }
+
+  .section {
+    scroll-margin-top: 0px;
   }
 }
