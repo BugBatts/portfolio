@@ -3,9 +3,6 @@
 }
 
 :root {
-  scroll-snap-type: y proximity;
-
-
   --header-radius: 30px;
 
   --white-rgb: 253, 251, 248;
