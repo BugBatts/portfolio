@@ -252,6 +252,10 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+  .banner {
+    position: relative;
+  }
+
   .tab-container {
     width: 100%;
   }
@@ -270,7 +274,7 @@ p {
   }
 
   .section {
-    scroll-margin-top: 162px;
+    scroll-margin-top: 0px;
   }
 
   .tab-container:last-of-type > .tab:not(.active):hover {
@@ -283,5 +287,10 @@ p {
   
   .tab-container:last-of-type > .active {
     background: rgba(0, 0, 0, 0.75);
+  }
+
+  .thumbnail {
+    width: 100%;
+    margin: 0px 0px 5px;
   }
 }
