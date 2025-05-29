@@ -22,31 +22,31 @@ body {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 h6 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 p {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: rgb(var(--dim-white-rgb));
 }
 
@@ -103,11 +103,11 @@ p {
 }
 
 .tab-container:first-of-type {
-  min-width: 59.9%;
+  min-width: calc(60% - 0.32px);
 }
 
 .tab-container:last-of-type {
-  min-width: 39.9%;
+  min-width: calc(40% - 0.48px);
 }
 
 .tab-container + .tab-container {
