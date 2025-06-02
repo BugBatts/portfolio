@@ -50,6 +50,7 @@ p {
   color: rgb(var(--dim-white-rgb));
 }
 
+
 .banner {
   position: sticky;
   top: 0;
@@ -89,7 +90,7 @@ p {
 .tab-super {
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -103,11 +104,11 @@ p {
 }
 
 .tab-container:first-of-type {
-  min-width: calc(60% - 0.32px);
+  min-width: calc(59.999% - 0.32px);
 }
 
 .tab-container:last-of-type {
-  min-width: calc(40% - 0.48px);
+  min-width: calc(39.999% - 0.48px);
 }
 
 .tab-container + .tab-container {
@@ -257,6 +258,10 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+  .tab-super {
+    flex-wrap: wrap;
+  }
+
   .tab-container {
     width: 100%;
   }
