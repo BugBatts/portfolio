@@ -216,8 +216,8 @@ p {
 }
 
 .thumbnail {
-  height: 7.32em;
-  width: auto;
+  width: 13.0133em;
+  height: auto;
   float: left;
 
   margin: 5px 5px 0px 0px;
@@ -225,7 +225,7 @@ p {
 }
 
 .large {
-  height: 14.92em;
+  width: 14.92em;
 }
 
 .clearfix::after {
