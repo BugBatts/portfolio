@@ -216,12 +216,16 @@ p {
 }
 
 .thumbnail {
-  width: 13em;
-  height: auto;
+  height: 7.32em;
+  width: auto;
   float: left;
 
   margin: 5px 5px 0px 0px;
   border-radius: 5px;
+}
+
+.large {
+  height: 14.92em;
 }
 
 .clearfix::after {
